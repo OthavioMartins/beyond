@@ -80,15 +80,15 @@ body{
 
 .container{
     display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    justify-content: space-between;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 10% 10% 5% 10% 10% 10% 10% 10% 10% 15%;
+    justify-content: center;
     height: 2500px;
 }
 
 .Main{
-    grid-column-start: 3;
-    grid-column-end: 7;
+    grid-column-start: 2;
+    grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 3;
 }
@@ -104,13 +104,12 @@ body{
 
 .abouttext{
     display: flex;
-    background-color: rgba(0, 255, 255, 0.2);
-    width: 100%;
+    width: 90%;
 }
 
 .About{
     font-family: "Montserrat", sans-serif;
-    font-size: 1.35rem;
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
     font-weight: 500;
     margin-top: 10%;
     color: white;
@@ -120,8 +119,8 @@ body{
     display: flex;
     justify-content: center;
     margin: auto;
-    grid-column-start: 7;
-    grid-column-end: 9;
+    grid-column-start: 4;
+    grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 3;
 }
@@ -130,92 +129,251 @@ body{
     height: 50%;
 }
 
+.Premain{
+    justify-content: center;
+    text-align: center;
+    background-color: #2D313C;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.VantagensTitle{
+    margin-top: 4%;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: clamp(1rem, 2.5vw, 2.5rem);
+}
+
 .Submain{
     display: grid;
     min-width: 100%;
     grid-template-columns: 33.33333% 33.33333% 33.33333%;
-    grid-template-rows: 40% 10% 30% 30%;
-    grid-column-start: 3;
-    grid-column-end: 9;
-    grid-row-start: 3;
+    grid-template-rows: 40% 20% 40%;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 4;
     grid-row-end: 9;
     border-radius: 50px;
-    border: solid 2px wheat;
+    background-color: #2D313C;
     grid-template-areas: 
-    "second third fourth";
+    "second third fourth"
+    "planos planos planos"
+    "cubo cubo cubo";
 }
 
-@media only screen and (max-width: 1400px) {
-    .Submain{
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 30% 30% 30% 10%;
-        grid-template-areas: 
-        "second"
-        "third"
-        "fourth";
-    }
-}
-
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
     .Submain{
         grid-template-columns: 100%;
-        grid-template-rows: 30% 30% 30% 10%;
+        grid-template-rows: 20% 20% 20% 10% 30%;
         grid-template-areas: 
         "second"
         "third"
-        "fourth";
+        "fourth"
+        "planos"
+        "cubo"
+        "cubo"
+        "cubo";
     }
 }
-
 .Second{
     display: grid;
-    height: 100%;
-    grid-area: second;
     grid-template-columns: 100%;
     grid-template-rows: 40% 60%;
-    min-width: 33.33333%;
+    grid-area: second;
+    height: 80%;
+    width: 70%;
     margin: auto;
-    margin: 5%;
     border-radius: 40px;
-    background-color: Blue;
+    background-color: #2D313C;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
 }
-
 .ImagemV{
     display: flex;
     justify-content: center;
     align-content: center;
+    margin-top: 15%;
     height: 100%;
     width: 100%;
 }
 
 .SVantagens{
     margin: auto;
-    height: auto;
+    height: 100%;
 }
 
 .TextV{
     text-align: center;
-    background-color: bisque;
+}
+
+.VText{
+    margin-top: 15%;
+    font-weight: 600;
+    color: #96979D;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(.50rem, 1vw, 1rem);
 }
 
 .Vantagens{
-    margin-top: 5%;
+    margin-top: 25%;
     color: white;
     font-family: "Montserrat", sans-serif;
-    font-size: 2rem;
+    font-size: clamp(.55rem, 1.55vw, 1.55rem);
 }
 
 .Third{
     grid-area: third;
-    margin: 5%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 60%;
+    height: 80%;
+    width: 70%;
+    margin: auto;
     border-radius: 40px;
-    background-color: Purple;
+    background-color: #2D313C;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
 }
 
 .Fourth{
-    margin: 5%;
+    grid-area: fourth;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 60%;
+    margin: auto;
+    height: 80%;
+    width: 70%;
     border-radius: 40px;
-    justify-content: center;
-    background-color: Lime;
+    background-color: #2D313C;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
 }
 
+.PlanosTitle{
+    grid-area: planos;
+    text-align: center;
+}
+
+.PlanosV{
+    margin-top: 5%;
+    font-weight: 600;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(1rem, 3vw, 3rem);
+}
+
+.PlanosDesc{
+    margin-top: 2.5%;
+    font-weight: 500;
+    color: #96979D;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(.65rem, 1.15vw, 1.15rem);
+}
+
+.cubo{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-area: cubo;
+}
+
+.Fifth{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+    margin: auto;
+    height: 80%;
+    width: 70%;
+    border-radius: 40px;
+    background-color: #2D313C;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+.Sixth{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+    margin: auto;
+    height: 80%;
+    width: 70%;
+    border-radius: 40px;
+    background-color: #5B7FFF;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+.Gratuito{
+    text-align: center;
+    margin-top: 10%;
+    font-weight: 600;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(1rem, 2.2vw, 2.2rem);
+}
+
+.GText{
+    margin-top: 6%;
+    text-align: center;
+    line-height: 400%;
+    font-weight: 600;
+    color: #96979D;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(.50rem, 1vw, 1rem);
+}
+
+.mes{
+    text-align: center;
+    margin-top: 10%;
+    font-weight: 600;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(1rem, 2.2vw, 2.2rem);
+}
+
+.PText{
+    margin-top: 6%;
+    text-align: center;
+    line-height: 400%;
+    font-weight: 600;
+    color: #2D303B;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(.50rem, 1vw, 1rem);
+}
+
+.Developed{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 9;
+    grid-row-end: 10;
+}
+
+.Beyondtm{
+    margin-top: 6%;
+    text-align: center;
+    font-weight: 600;
+    color: #8B8C8F;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(.50rem, 1vw, 1rem);
+}
+
+.Footer {
+    position: fixed;
+    bottom: 0vw;
+    left: 0vh;
+    width: 100vw;
+    height: 5.35vh;
+    background-color: #1E1E1E;
+    text-align: center;
+    color: white;
+    z-index: 1;
+  }
+
+.FooterText{
+    margin-top: 0.75%;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(.50rem, 1vw, 1rem);
+}
