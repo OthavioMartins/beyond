@@ -1,0 +1,221 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+html {
+    scrollbar-width: normal;
+    scrollbar-color: #0c0c0f;
+  }
+  
+  html::-webkit-scrollbar {
+    width: 1.2vh;
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background-color: rgb(219, 219, 219);
+    border-radius: 25px;
+  }
+  
+  html::-webkit-scrollbar-thumb:hover {
+    background-color: white;
+    box-shadow: 0 0 10px white, 0 0 20px white, 10px 10px 40px white; 
+  }
+  
+  html::-webkit-scrollbar-track {
+    background-color: #1F2436;
+  }
+
+li, a{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+}
+
+body{
+    background-color: #181A20;
+}
+
+.backsvg{
+    position: absolute;
+    max-width: 100%;
+    z-index: -1;
+}
+
+.header{
+    background-color: #2D303B;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    backdrop-filter: blur(8px);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    height: 45%;
+    padding: 1.5%;
+}
+
+.header__links{
+    list-style: none;
+}
+  
+.header__links li{
+    display: inline-block;
+    padding: 0px 65px;
+    transition: .5s;
+}
+
+.header__links a:hover{
+    transition: .5s;
+    color: #5B7FFF;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    justify-content: space-between;
+    height: 2500px;
+}
+
+.Main{
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.DocketTitle{
+    font-family: "Montserrat", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-top: 15%;
+    color: white;
+    letter-spacing: 5px;
+}
+
+.abouttext{
+    display: flex;
+    background-color: rgba(0, 255, 255, 0.2);
+    width: 100%;
+}
+
+.About{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    margin-top: 10%;
+    color: white;
+}
+
+.First{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.docket{
+    height: 50%;
+}
+
+.Submain{
+    display: grid;
+    min-width: 100%;
+    grid-template-columns: 33.33333% 33.33333% 33.33333%;
+    grid-template-rows: 40% 10% 30% 30%;
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 3;
+    grid-row-end: 9;
+    border-radius: 50px;
+    border: solid 2px wheat;
+    grid-template-areas: 
+    "second third fourth";
+}
+
+@media only screen and (max-width: 1400px) {
+    .Submain{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 30% 30% 30% 10%;
+        grid-template-areas: 
+        "second"
+        "third"
+        "fourth";
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .Submain{
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 30% 30% 10%;
+        grid-template-areas: 
+        "second"
+        "third"
+        "fourth";
+    }
+}
+
+.Second{
+    display: grid;
+    height: 100%;
+    grid-area: second;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 60%;
+    min-width: 33.33333%;
+    margin: auto;
+    margin: 5%;
+    border-radius: 40px;
+    background-color: Blue;
+}
+
+.ImagemV{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.SVantagens{
+    margin: auto;
+    height: auto;
+}
+
+.TextV{
+    text-align: center;
+    background-color: bisque;
+}
+
+.Vantagens{
+    margin-top: 5%;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+}
+
+.Third{
+    grid-area: third;
+    margin: 5%;
+    border-radius: 40px;
+    background-color: Purple;
+}
+
+.Fourth{
+    margin: 5%;
+    border-radius: 40px;
+    justify-content: center;
+    background-color: Lime;
+}
+
