@@ -377,3 +377,40 @@ body{
     font-family: "Montserrat", sans-serif;
     font-size: clamp(.50rem, 1vw, 1rem);
 }
+
+.yt{
+    color: white;
+    transition: .5s;
+  }
+  
+  .yt:hover{
+    color: #5B7FFF;
+    transition: .5s;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .ldin{
+    color: white;
+    transition: .5s;
+    margin: 40px;
+  }
+  
+  .ldin:hover{
+    color: #5B7FFF;
+    transition: .5s;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .inst{
+    color: white;
+    transition: .5s;
+  }
+  
+  .inst:hover{
+    color: #5B7FFF;
+    transition: .5s;
+    height: 50px;
+    cursor: pointer;
+  }
